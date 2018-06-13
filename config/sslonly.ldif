@@ -1,0 +1,7 @@
+dn: cn=config
+changetype: modify
+add: olcLocalSSF
+olcLocalSSF: 256
+-
+add: olcSecurity
+olcSecurity: update_ssf=128 simple_bind=128

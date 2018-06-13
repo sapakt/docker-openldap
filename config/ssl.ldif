@@ -1,0 +1,19 @@
+dn: cn=config
+changetype: modify
+add: olcTLSCipherSuite
+olcTLSCipherSuite: NORMAL
+-
+add: olcTLSCRLCheck
+olcTLSCRLCheck: none
+-
+add: olcTLSVerifyClient
+olcTLSVerifyClient: never
+-
+add: olcTLSCACertificateFile
+olcTLSCACertificateFile: {{ LDAP_TLS_CACERT }}
+-
+add: olcTLSCertificateFile
+olcTLSCertificateFile: {{ LDAP_TLS_CERT }}
+-
+add: olcTLSCertificateKeyFile
+olcTLSCertificateKeyFile: {{ LDAP_TLS_KEY }}
